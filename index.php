@@ -76,6 +76,15 @@
                     <div class="brown"></div>
                     <div class="blue"></div>
                 </div>
+                <div class="clear"></div>
+            </div>
+            <div class="navigation">
+                <ul>
+                    <center>
+                        <li class="fltleft navitem"><a href="index.php">Übersicht</a></li>
+                        <li class="fltleft navitem"><a href="index.php">Übersicht</a></li>
+                    </center>
+                </ul>
             </div>
             <!--<div class="navbar fltleft">
                 <ul>
