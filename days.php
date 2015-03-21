@@ -68,9 +68,6 @@
             <?php echo "${demo.css}"; ?>
         </style>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-        <!--<script src="http://code.highcharts.com/maps/highmaps.js"></script>
-        <script src="http://code.highcharts.com/maps/modules/exporting.js"></script>
-        <script src="http://code.highcharts.com/mapdata/countries/ch/ch-all.js"></script>-->
         <script src="http://code.highcharts.com/highcharts.js"></script>
         <script src="http://code.highcharts.com/modules/exporting.js"></script>
         <script type="text/javascript">
@@ -154,7 +151,7 @@
                 <ul>
                     <center>
                         <li class="fltleft navitem"><a href="index.php">Overview</a></li>
-                        <li class="fltleft navitem"><a href="days.php">Daily Spend</a></li>
+                        <li class="fltleft navitem"><a href="days.php">Daily Spending</a></li>
                     </center>
                 </ul>
             </div>
