@@ -32,7 +32,7 @@
         }
         $turnover_sum=array_sum($turnover);
 
-        $query6="select merchCategory,name,sum(spend*numTrx) as total from import,merch where import.merchCategory=merch.id and country in (".$selectedCountry.") group by days,merchCategory having total > ".$turnover_sum*0.007."";
+        $query6="select merchCategory,name,sum(spend*numTrx) as total from import,merch where import.merchCategory=merch.id and country in (".$selectedCountry.") group by days,merchCategory having total > ".$turnover_sum*0.007." order by total desc";
         $result6=mysql_query($query6);
         while ($line=mysql_fetch_array($result6)) {
                 $column[$line[0]]=array("type" => "column","name" => $line[1], "data" => array_fill(0,count($cat),0), "yAxis" => 1, "visible" => false);
@@ -44,7 +44,7 @@
                 $column[$line[1]]["data"][10-$line[0]]=$line[2];
         }
 
-        $query3="select kanton.name,kanton.fullname,sum(spend*numTrx) as total from import,locations,kanton where import.location=locations.id and locations.kt=kanton.id and country in (".$selectedCountry.") group by import.days,kanton.name having total  > ".$turnover_sum*0.005."";
+        $query3="select kanton.name,kanton.fullname,sum(spend*numTrx) as total from import,locations,kanton where import.location=locations.id and locations.kt=kanton.id and country in (".$selectedCountry.") group by import.days,kanton.name having total  > ".$turnover_sum*0.005." order by total desc";
         $result3=mysql_query($query3);
         while ($line=mysql_fetch_array($result3)) {
                 $data[$line[0]]=array("name" => $line[1], "data" => array_fill(0,count($cat),0));
@@ -116,7 +116,11 @@
                 }],
                 tooltip: {
                     shared: true,
-                    valueSuffix: ' CHF'
+                    useHTML: true,
+                    headerFormat: '<table>',
+                    pointFormat: '<tr><td style="color: {series.color}">{series.name}: </td>' +
+                        '<td style="text-align: right"><b>{point.y} CHF</b></td></tr>',
+                    footerFormat: '</table>',
                 },
                 credits: {
                     enabled: false

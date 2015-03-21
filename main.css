@@ -68,6 +68,11 @@ li:hover
     margin-top: 5px;
 }
 
+.navitem:last-child
+{
+    border: 0px;
+}
+
 .brown
 {
     background-color: #6D4D36;
