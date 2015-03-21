@@ -2,6 +2,7 @@
 <html>
     <?php
         include './dblogin.php';
+        include './globalVar.php';
         $cat= array();	
         $kan= array();
         $data = array();
@@ -123,14 +124,14 @@
             <div class="navigation">
                 <ul>
                     <center>
-                        <li class="fltleft navitem"><a href="index.php">Übersicht</a></li>
-                        <li class="fltleft navitem"><a href="days.php">Tage</a></li>
+                        <li class="fltleft navitem"><a href="index.php">Overview</a></li>
+                        <li class="fltleft navitem"><a href="days.php">Days</a></li>
                     </center>
                 </ul>
             </div>
             <div class="content">
                 <form method="get" id="frmSelectCountry">
-                    <select id="soflow" onchange="document.getElementById('frmSelectCountry').submit();" name='selectedCountry'>
+                    <span style="margin-left: 40px;">Customer Origin Country: </span><select id="soflow" onchange="document.getElementById('frmSelectCountry').submit();" name='selectedCountry'>
                     <option value="-1">Alle</option>
                     <?php
                         $res = mysql_query("select * from country");
@@ -142,9 +143,8 @@
                             echo ">".$row["name"]."</option>";
                         }
                     ?>
-                </select>
-            </form>
-                
+                    </select>
+                </form>
                 <div id="container" style="min-width: 310px; height: 500px; margin: 0 auto"></div>
             </div>
         </div>

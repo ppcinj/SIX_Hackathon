@@ -81,8 +81,8 @@
             <div class="navigation">
                 <ul>
                     <center>
-                        <li class="fltleft navitem"><a href="index.php">Übersicht</a></li>
-                        <li class="fltleft navitem"><a href="days.php">Tage</a></li>
+                        <li class="fltleft navitem"><a href="index.php">Overview</a></li>
+                        <li class="fltleft navitem"><a href="days.php">Days</a></li>
                     </center>
                 </ul>
             </div>
