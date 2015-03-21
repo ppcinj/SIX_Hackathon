@@ -139,7 +139,7 @@
     <body>
         <div class="container">
             <div class="headerbar">
-                <div class="headerimage fltleft"><img src="Logo_1.png" alt="LOGO" height="120" /></div>
+                <div class="headerimage fltleft"><a href="index.php"><img src="Logo_1.png" alt="LOGO" height="120" /></a></div>
                 <div class="headerextension">
                     <div class="brown"></div>
                     <div class="blue"></div>
