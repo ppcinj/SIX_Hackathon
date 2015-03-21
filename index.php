@@ -82,17 +82,10 @@
                 <ul>
                     <center>
                         <li class="fltleft navitem"><a href="index.php">Übersicht</a></li>
-                        <li class="fltleft navitem"><a href="index.php">Übersicht</a></li>
+                        <li class="fltleft navitem"><a href="days.php">Tage</a></li>
                     </center>
                 </ul>
             </div>
-            <!--<div class="navbar fltleft">
-                <ul>
-                    <li><a href="index.php">Link</a></li>
-                    <li><a href="">Link</a></li>
-                    <li><a href="">Link</a></li>
-                </ul>
-            </div>-->
             <div class="content">
                 <div id="container"></div>
             </div>
