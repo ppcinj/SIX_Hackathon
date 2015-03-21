@@ -4,6 +4,16 @@
         include './dblogin.php';
         include './globalVar.php';
         $selectedCountry=$_GET['selectedCountry'];
+        
+        $useContinentSelection = false;
+        
+        if (substr($_GET["selectedCountry"], 0, 1) == "#")
+        {
+            $useContinentSelection = true;
+            $selectedCountry = substr($_GET["selectedCountry"], 1, 1);
+            $selectedCountry = "select id from country where continent =".$selectedCountry;
+        }
+        
         if ($selectedCountry == -1 | !isset($_GET['selectedCountry'])) { $selectedCountry="1,2,3,4,5,6,7,8,9,10,11,12,13,14"; }		
         $cat= array();	
         $kan= array();
@@ -154,6 +164,15 @@
                         {
                             echo "<option value='".$row["id"]."' ";
                             if ($_GET["selectedCountry"] == $row["id"])
+                                echo "selected";
+                            echo ">".$row["name"]."</option>";
+                        }
+                        echo "<<option disabled>-----------</option>";
+                        $res = mysql_query("select * from continent");
+                        while ($row = mysql_fetch_assoc($res))
+                        {
+                            echo "<option value='#".$row["id"]."' ";
+                            if ($_GET["selectedCountry"] == "#".$row["id"])
                                 echo "selected";
                             echo ">".$row["name"]."</option>";
                         }
