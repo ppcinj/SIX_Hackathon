@@ -119,6 +119,7 @@
                 </div>
                 <div class="clear"></div>
             </div>
+            
             <div class="navigation">
                 <ul>
                     <center>
@@ -128,6 +129,22 @@
                 </ul>
             </div>
             <div class="content">
+                <form method="get" id="frmSelectCountry">
+                    <select id="soflow" onchange="document.getElementById('frmSelectCountry').submit();" name='selectedCountry'>
+                    <option value="-1">Alle</option>
+                    <?php
+                        $res = mysql_query("select * from country");
+                        while ($row = mysql_fetch_assoc($res))
+                        {
+                            echo "<option value='".$row["id"]."' ";
+                            if ($_GET["selectedCountry"] == $row["id"])
+                                echo "selected";
+                            echo ">".$row["name"]."</option>";
+                        }
+                    ?>
+                </select>
+            </form>
+                
                 <div id="container" style="min-width: 310px; height: 500px; margin: 0 auto"></div>
             </div>
         </div>
