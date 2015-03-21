@@ -80,10 +80,7 @@
             </div>
             <div class="navigation">
                 <ul>
-                    <center>
-                        <li class="fltleft navitem"><a href="index.php">Overview</a></li>
-                        <li class="fltleft navitem"><a href="days.php">Daily Spending</a></li>
-                    </center>
+                    <?php include './navitems.php'; ?>
                 </ul>
             </div>
             <div class="content">
