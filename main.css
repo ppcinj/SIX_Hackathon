@@ -21,8 +21,8 @@ li
     list-style: none;
     line-height: 16px;
     //padding: 7px 2px 6px 12px;
-    padding: 5px;
-    margin: 10px;
+    padding: 10px;
+    //margin: 10px;
 }
 
 li:hover
@@ -63,6 +63,9 @@ li:hover
 {
     color: white;
     font-weight: bold;
+    border-right: 1px solid black;
+    padding: 10px;
+    margin-top: 5px;
 }
 
 .brown

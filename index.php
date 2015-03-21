@@ -82,7 +82,7 @@
                 <ul>
                     <center>
                         <li class="fltleft navitem"><a href="index.php">Overview</a></li>
-                        <li class="fltleft navitem"><a href="days.php">Days</a></li>
+                        <li class="fltleft navitem"><a href="days.php">Daily Spend</a></li>
                     </center>
                 </ul>
             </div>
