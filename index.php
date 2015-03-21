@@ -15,7 +15,7 @@
             }
         ?>
         <style type="text/css">
-            ${demo.css}
+            <?php echo "${demo.css}"; ?>
         </style>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
         <script src="http://code.highcharts.com/maps/highmaps.js"></script>
